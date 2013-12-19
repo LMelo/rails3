@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Pessoa:</b>
+  <%= @endereco.pessoa_id %>
+</p>
+
+<p>
+  <b>Numero:</b>
+  <%= @endereco.numero %>
+</p>
+
+
+<%= link_to 'Edit', edit_endereco_path(@endereco) %> |
+<%= link_to 'Back', enderecos_path %>

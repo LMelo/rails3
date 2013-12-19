@@ -25,6 +25,7 @@ class PessoasController < ApplicationController
   # GET /pessoas/new.json
   def new
     @pessoa = Pessoa.new
+    #@pessoa.enderecos.build
 
     respond_to do |format|
       format.html # new.html.erb

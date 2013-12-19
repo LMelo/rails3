@@ -1,4 +1,9 @@
 Erp::Application.routes.draw do
+  get "pessoa/adicionar_endereco"
+
+  resources :enderecos
+
+
   resources :pessoas
 
 

@@ -3,8 +3,29 @@
 
   <div class="form-inputs">
     <%= f.input :nome %>
-    <%= f.input :data_nascimento %>
+    <%= f.input :data_nascimento, start_year: Date.today.year - 100, end_year: Date.today.year %>
     <%= f.input :ativo %>
+    <fieldset>
+      <legend>Enderecos</legend>
+      <table class="table table-bordered table-condensed">
+        <thead>
+            <tr>
+              <th>Numero</th>
+              <th>Principal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%= f.association :enderecos do |e| %>
+                <tr>
+                  <td><%= e.input :numero, label: false%></td>
+                  <td><%= e.input :principal, label: false %></td>
+                </tr>
+            <% end %>
+        </tbody>
+      </table>
+
+    </fieldset>
+
   </div>
 
   <div class="form-actions">
