@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @pessoa.nome %>
+</p>
+
+<p>
+  <b>Data nascimento:</b>
+  <%= @pessoa.data_nascimento %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%= @pessoa.ativo %>
+</p>
+
+
+<%= link_to 'Edit', edit_pessoa_path(@pessoa), :class => "btn" %> |
+<%= link_to 'Back', pessoas_path, :class => "btn" %>
