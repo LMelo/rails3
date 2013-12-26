@@ -3,11 +3,12 @@
 
   <div class="form-inputs">
     <%= f.input :nome %>
-    <%= f.input :data_nascimento, start_year: Date.today.year - 100, end_year: Date.today.year %>
+    <%= f.input :data_nascimento, apphelper_get_date_range %>
     <%= f.input :ativo %>
     <fieldset>
-      <legend>Enderecos</legend>
+      <!--<legend>Enderecos</legend>-->
       <table class="table table-bordered table-condensed">
+        <caption class="text-left"><h4>Endereco</h4></caption>
         <thead>
             <tr>
               <th>Numero</th>

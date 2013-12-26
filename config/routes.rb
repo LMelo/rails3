@@ -2,9 +2,9 @@ Erp::Application.routes.draw do
   get "pessoa/adicionar_endereco"
 
   resources :enderecos
-
-
   resources :pessoas
+
+  root :to => "pessoas#index"
 
 
   # The priority is based upon order of creation:
